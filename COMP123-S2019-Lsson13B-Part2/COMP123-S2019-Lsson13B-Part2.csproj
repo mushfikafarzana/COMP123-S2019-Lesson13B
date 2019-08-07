@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9426AB7-9105-4FDB-8CEA-97DB7DDE033F}</ProjectGuid>
+    <ProjectGuid>{7B342A5D-6593-4902-B30A-E18315A7B844}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>COMP123_S2019_Lesson13B</RootNamespace>
-    <AssemblyName>COMP123-S2019-Lesson13B</AssemblyName>
+    <RootNamespace>COMP123_S2019_Lsson13B_Part2</RootNamespace>
+    <AssemblyName>COMP123-S2019-Lsson13B-Part2</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChildForm.Designer.cs">
+      <DependentUpon>ChildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyMDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MyMDIParent.Designer.cs">
+      <DependentUpon>MyMDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ParentForm.Designer.cs">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +75,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ChildForm.resx">
+      <DependentUpon>ChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MyMDIParent.resx">
+      <DependentUpon>MyMDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ParentForm.resx">
+      <DependentUpon>ParentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
